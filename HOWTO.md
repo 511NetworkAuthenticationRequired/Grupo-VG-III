@@ -1,6 +1,5 @@
 # Guía de Uso del Simulador de Planificación y Gestión de Memoria 
 
-
 ## Descripción
 
 Este software es un simulador de Sistema Operativo con Interfaz Gráfica (GUI) diseñado para demostrar visualmente la gestión de procesos y memoria.
@@ -50,7 +49,8 @@ Si `pip` no se reconoce, revisar que en la instalación de Python se haya marcad
    python gui.py
    ```
 
-> **Nota:** No ejecutar `simulador_motor.py` ni `lector_csv.py` directamente.
+> [!NOTE]
+> No ejecutar `simulador_motor.py` ni `lector_csv.py` directamente.
 > El punto de entrada de la aplicación es **`gui.py`**.
 
 
@@ -67,13 +67,13 @@ El simulador toma como entrada un archivo `.csv` (valores separados por coma) qu
 | **TA**     | Tiempo de arribo al sistema.                               | 0       |
 | **TI**     | Tiempo total de irrupción de CPU (burst total de CPU).     | 5       |
 
-> **Nota importante:**
+> [!NOTE]
 > `TI` es el **tiempo total de CPU** del proceso.
 > El simulador mantiene internamente un campo `t_restante` y lo actualiza en cada Tick; **no** se carga `t_restante` en el CSV.
 
 ### Ejemplo de archivo (`procesos.csv`)
 
-```text
+```csv
 ID,TAMANO,TA,TI
 1,200,0,5
 2,50,0,3
@@ -166,7 +166,7 @@ Se simula una memoria total de **550 KB** con el siguiente esquema:
 |   **2**   |  350 | 150 KB | Procesos medianos             |
 |   **3**   |  500 |  50 KB | Procesos pequeños             |
 
-> **Importante:**
+> [!IMPORTANT]
 > Un proceso solo puede ubicarse en particiones de usuario (1, 2 o 3).
 > Si su tamaño es **mayor a 250 KB**, nunca podrá ser admitido en memoria: será tratado como “no admitido” aunque entre al sistema.
 
@@ -213,7 +213,7 @@ Reglas:
   * Víctima → se pasa a **L/S** y se libera su partición.
   * Candidato → se carga en la partición liberada y pasa a **Listo**.
 
-> **Importante:**
+> [!IMPORTANT]
 > Si el proceso no cabe en ninguna partición de usuario, **no habrá swap posible**.
 > Swapping no “salta” la limitación física de las particiones.
 
@@ -331,3 +331,4 @@ Conceptualmente:
 
   * Si ya hay 5 procesos activos (en memoria o en L/S), el proceso no puede entrar al sistema.
   * Una vez que finalice o salga alguno, el proceso pendiente será admitido automáticamente y dejará de aparecer como “Sin Arribar”.
+
