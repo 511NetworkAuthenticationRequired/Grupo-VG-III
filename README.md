@@ -3,6 +3,12 @@
 Desarrollado como proyecto académico para la cátedra de Sistemas Operativos.  
 Este simulador visual implementa los componentes fundamentales de un sistema operativo moderno: **planificación de procesos**, **gestión de memoria**, **swapping**, y **control del grado de multiprogramación**, todo representado mediante una interfaz gráfica paso a paso.
 
+
+<p align="center">
+ <img width="592" height="288" alt="logos vg iii" src="https://github.com/user-attachments/assets/ee50bb86-31c0-4bde-9a0d-02c16c360567" />
+</p>
+
+
 El simulador permite cargar procesos desde un archivo CSV y ejecutar, paso a paso:
 - **Planificación SRTF (Shortest Remaining Time First)** con desalojo.  
 - **Administración de memoria por Particiones Fijas (MFT)**.  
@@ -11,7 +17,6 @@ El simulador permite cargar procesos desde un archivo CSV y ejecutar, paso a pas
 - Control del **grado de multiprogramación**.  
 
 El estado completo del sistema se visualiza en tiempo real: colas, particiones, eventos del tick, progreso por proceso y métricas finales.
-
 
 ---
 
