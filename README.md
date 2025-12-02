@@ -31,4 +31,3 @@ El estado completo del sistema se visualiza en tiempo real: colas, particiones, 
 - Tabla dinámica con progreso de cada proceso.  
 - Cálculo automático de **T**, **W**, **R** y **Throughput**.  
 - Lectura flexible de CSV con encabezados variables.
----
